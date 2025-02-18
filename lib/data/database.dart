@@ -1,4 +1,4 @@
-import 'package:hirola_app/db/model/model.dart';
+import 'package:hirola_app/data/model/model.dart';
 import 'package:sqflite/sqflite.dart';
 
 late Database _db;
@@ -14,7 +14,8 @@ Future<void> initializeDatabase() async {
         "id INTEGER PRIMARY KEY AUTOINCREMENT, "
         "title TEXT, "
         "content TEXT, "
-        "image TEXT"
+        "imageIndex INTEGER, " // Changed image field to an integer
+        "color TEXT"           // Added new color field
         ");",
       );
     },
@@ -28,7 +29,8 @@ Future<void> addNote(NoteModel note) async {
     {
       'title': note.title,
       'content': note.content,
-      'image': note.image, // Store as file path or Base64 string
+      'imageIndex': note.imageIndex, // Changed field name
+      'color': note.color, // Added color field
     },
   );
 }
@@ -45,7 +47,8 @@ Future<void> updateNote(NoteModel updatedNote) async {
     {
       'title': updatedNote.title,
       'content': updatedNote.content,
-      'image': updatedNote.image,
+      'imageIndex': updatedNote.imageIndex, // Updated field name
+      'color': updatedNote.color, // Updated color field
     },
     where: 'id = ?',
     whereArgs: [updatedNote.id],

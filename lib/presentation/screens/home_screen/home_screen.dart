@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hirola_app/core/colors.dart';
-import 'package:hirola_app/presentation/add_note_screen/add_note_screen.dart';
+import 'package:hirola_app/presentation/screens/add_note_screen/add_note_screen.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,22 +22,22 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 9.0, right: 9),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          filled: true,
-                          fillColor: kGrey300,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(11),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(11),
-                            borderSide: BorderSide(color: Colors.transparent),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(11),
-                            borderSide: BorderSide(color: Colors.transparent),
-                          ),
-                          hintText: "Search your notes",
-                          //hintStyle: GoogleFonts.roboto()
-                        ),
+                            filled: true,
+                            fillColor: kGrey300,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: BorderSide(color: Colors.transparent),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: BorderSide(color: Colors.transparent),
+                            ),
+                            hintText: "Search your notes",
+                            hintStyle: GoogleFonts.aBeeZee(color: kblack,
+                                fontWeight: FontWeight.w400, fontSize: 18)),
                       ),
                     ),
                   ),
@@ -48,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                           color: kGrey300,
                           borderRadius: BorderRadius.circular(11)),
                       child: IconButton(
-                          onPressed: () {}, icon: Icon(Icons.grid_3x3)),
+                          onPressed: () {}, icon: Icon(Icons.grid_3x3,color: kblack,)),
                     ),
                   ),
                 ],
