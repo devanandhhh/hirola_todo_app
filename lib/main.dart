@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hirola_app/data/database.dart';
+import 'package:hirola_app/presentation/bloc/get_all_notes/get_all_notes_bloc.dart';
+import 'package:hirola_app/presentation/bloc/color_bloc/color_bloc_cubit.dart';
+import 'package:hirola_app/presentation/bloc/select_image/select_image_cubit.dart';
 import 'package:hirola_app/presentation/bloc/theme_bloc/theme_bloc_cubit.dart';
 import 'package:hirola_app/presentation/screens/home_screen/home_screen.dart';
-import 'package:flutter_bloc/flutter_bloc.dart'; // ✅ Import flutter_bloc
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDatabase();
   runApp(const MyApp());
 }
 
@@ -17,9 +23,15 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => ThemeBlocCubit(),
         ),
-        // BlocProvider(
-        //   create: (context) => SubjectBloc(),
-        // ),
+        BlocProvider(
+          create: (context) => ColorBlocCubit(),
+        ),
+        BlocProvider(
+          create: (context) => SelectImageCubit(),
+        ),
+        BlocProvider(
+          create: (context) => GetAllNotesBloc(),
+        ),
       ],
       child: BlocBuilder<ThemeBlocCubit, bool>(
         builder: (context, isDarkMode) {

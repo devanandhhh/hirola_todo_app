@@ -14,7 +14,7 @@ Future<void> initializeDatabase() async {
         "id INTEGER PRIMARY KEY AUTOINCREMENT, "
         "title TEXT, "
         "content TEXT, "
-        "imageIndex INTEGER, " // Changed image field to an integer
+        "image TEXT, " // Changed image field to an integer
         "color TEXT"           // Added new color field
         ");",
       );
@@ -29,7 +29,7 @@ Future<void> addNote(NoteModel note) async {
     {
       'title': note.title,
       'content': note.content,
-      'imageIndex': note.imageIndex, // Changed field name
+      'image': note.image, // Changed field name
       'color': note.color, // Added color field
     },
   );
@@ -47,7 +47,7 @@ Future<void> updateNote(NoteModel updatedNote) async {
     {
       'title': updatedNote.title,
       'content': updatedNote.content,
-      'imageIndex': updatedNote.imageIndex, // Updated field name
+      'image': updatedNote.image, // Updated field name
       'color': updatedNote.color, // Updated color field
     },
     where: 'id = ?',
