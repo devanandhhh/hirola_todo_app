@@ -1,16 +1,22 @@
-# hirola_app
+## Hirola App - A Simple To-Do Application
 
-A new Flutter project.
+Hirola App is a feature-rich to-do application designed for efficient note management.
 
-## Getting Started
+## Key Features:
+✅ Home Screen:
 
-This project is a starting point for a Flutter application.
+* Search bar for easy note filtering.
+* Toggle button to switch between Grid View and List View.
+Dark mode and light mode support.
+✅ Add Note Page:
 
-A few resources to get you started if this is your first Flutter project:
+* Two text fields for entering note details.
+* Options to select a color and add an image to a note.
+✅ View & Manage Notes:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* Notes are displayed on the home screen in the selected view mode.
+* Clicking a note opens a detailed view, where you can edit or delete the note.
+✅ Tech Stack:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Database: SQFlite for local storage.
+## State Management: BLoC & Cubit for handling UI state.
