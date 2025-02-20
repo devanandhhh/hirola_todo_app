@@ -1,7 +1,7 @@
-
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hirola_app/presentation/screens/home_screen/home_screen.dart';
+
+import '../../widgets/methods.dart';
 
 class CustomListTile extends StatelessWidget {
   const CustomListTile({
@@ -20,7 +20,7 @@ class CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * .15,
+      height: 120,
       width: double.infinity,
       decoration: BoxDecoration(
           color: getColorFromString(color),
@@ -37,10 +37,16 @@ class CustomListTile extends StatelessWidget {
                 children: [
                   Text(
                     titlename,
+                    //convertingString(titlename, 19),
+                    maxLines: 1,
                     style: GoogleFonts.aBeeZee(
                         fontWeight: FontWeight.bold, fontSize: 25),
                   ),
-                  Text(contentHere,
+                  Text(
+                      titlename
+                      //convertingString(contentHere,21)
+                      ,
+                      maxLines: 2,
                       style: GoogleFonts.aBeeZee(
                         fontSize: 18,
                       ))
@@ -53,4 +59,8 @@ class CustomListTile extends StatelessWidget {
       ),
     );
   }
+}
+
+String convertingString(String text, int maxLength) {
+  return text.length > maxLength ? '${text.substring(0, maxLength)}...' : text;
 }

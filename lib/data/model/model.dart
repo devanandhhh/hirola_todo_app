@@ -13,23 +13,5 @@ class NoteModel {
     required this.color,
   });
 
-  // Map<String, dynamic> toMap() {
-  //   return {
-  //     'id': id,
-  //     'title': title,
-  //     'content': content,
-  //     'image': image, // Updated field
-  //     'color': color, // New field
-  //   };
-  // }
-
-  // factory NoteModel.fromMap(Map<String, dynamic> map) {
-  //   return NoteModel(
-  //     id: map['id'],
-  //     title: map['title'],
-  //     content: map['content'],
-  //     image: map['image'], // Updated field
-  //     color: map['color'], // New field
-  //   );
-  // }
+  
 }

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:hirola_app/data/database.dart';
 import 'package:hirola_app/presentation/bloc/get_all_notes/get_all_notes_bloc.dart';
 import 'package:hirola_app/presentation/bloc/color_bloc/color_bloc_cubit.dart';
+import 'package:hirola_app/presentation/bloc/search_note/search_note_cubit.dart';
 import 'package:hirola_app/presentation/bloc/select_image/select_image_cubit.dart';
 import 'package:hirola_app/presentation/bloc/theme_bloc/theme_bloc_cubit.dart';
+import 'package:hirola_app/presentation/bloc/view_toggle/view_toggle_cubit.dart';
 import 'package:hirola_app/presentation/screens/home_screen/home_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -31,6 +33,12 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => GetAllNotesBloc(),
+        ),
+        BlocProvider(
+          create: (context) => ViewToggleCubit(),
+        ),
+        BlocProvider(
+          create: (context) => SearchNoteCubit(),
         ),
       ],
       child: BlocBuilder<ThemeBlocCubit, bool>(

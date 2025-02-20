@@ -68,6 +68,7 @@ flutter:
     - assets/cartoon.png
     - assets/taskImageOne.webp
     - assets/exercise.png
+    - assets/gostimg.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
