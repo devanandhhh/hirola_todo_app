@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hirola_app/core/colors.dart';
-import 'package:hirola_app/data/database.dart';
+import 'package:hirola_app/data/db/database.dart';
 import 'package:hirola_app/data/model/model.dart';
 import 'package:hirola_app/presentation/screens/add_note_screen/add_note_screen.dart';
 import 'package:hirola_app/presentation/screens/widgets/custom_save_button.dart';

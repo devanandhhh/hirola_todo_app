@@ -7,7 +7,7 @@ import 'package:hirola_app/presentation/bloc/color_bloc/color_bloc_cubit.dart';
 import 'package:hirola_app/presentation/bloc/select_image/select_image_cubit.dart';
 import 'package:hirola_app/presentation/screens/add_note_screen/widgets/custom_color_container.dart';
 
-import '../../../data/database.dart';
+import '../../../data/db/database.dart';
 import '../../../data/model/model.dart';
 import '../../bloc/get_all_notes/get_all_notes_bloc.dart';
 import '../widgets/custom_save_button.dart';

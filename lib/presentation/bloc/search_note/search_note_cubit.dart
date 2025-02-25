@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-import '../../../data/database.dart';
+import '../../../data/db/database.dart';
 
 part 'search_note_state.dart';
 

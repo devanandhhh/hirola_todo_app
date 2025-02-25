@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hirola_app/data/database.dart';
+import 'package:hirola_app/data/db/database.dart';
 import 'package:hirola_app/presentation/bloc/get_all_notes/get_all_notes_bloc.dart';
 import 'package:hirola_app/presentation/bloc/color_bloc/color_bloc_cubit.dart';
 import 'package:hirola_app/presentation/bloc/search_note/search_note_cubit.dart';
@@ -22,24 +22,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (context) => ThemeBlocCubit(),
-        ),
-        BlocProvider(
-          create: (context) => ColorBlocCubit(),
-        ),
-        BlocProvider(
-          create: (context) => SelectImageCubit(),
-        ),
-        BlocProvider(
-          create: (context) => GetAllNotesBloc(),
-        ),
-        BlocProvider(
-          create: (context) => ViewToggleCubit(),
-        ),
-        BlocProvider(
-          create: (context) => SearchNoteCubit(),
-        ),
+        BlocProvider(create: (context) => ThemeBlocCubit()),
+        BlocProvider(create: (context) => ColorBlocCubit()),
+        BlocProvider(create: (context) => SelectImageCubit()),
+        BlocProvider(create: (context) => GetAllNotesBloc()),
+        BlocProvider(create: (context) => ViewToggleCubit()),
+        BlocProvider(create: (context) => SearchNoteCubit()),
       ],
       child: BlocBuilder<ThemeBlocCubit, bool>(
         builder: (context, isDarkMode) {

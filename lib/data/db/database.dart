@@ -47,8 +47,8 @@ Future<void> updateNote(NoteModel updatedNote) async {
     {
       'title': updatedNote.title,
       'content': updatedNote.content,
-      'image': updatedNote.image, // Updated field name
-      'color': updatedNote.color, // Updated color field
+      'image': updatedNote.image, 
+      'color': updatedNote.color, 
     },
     where: 'id = ?',
     whereArgs: [updatedNote.id],

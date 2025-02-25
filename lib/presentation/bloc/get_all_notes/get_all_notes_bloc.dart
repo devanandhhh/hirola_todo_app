@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-import '../../../data/database.dart';
+import '../../../data/db/database.dart';
 
 part 'get_all_notes_event.dart';
 part 'get_all_notes_state.dart';
